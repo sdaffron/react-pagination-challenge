@@ -1,6 +1,7 @@
-# Getting Started with Create React App
+# React Pagination Challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Challege Scenario
+Contribute code to populate the pre-defined table with data rows from an API. Code should be written in App.js.
 
 ## Available Scripts
 
