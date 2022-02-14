@@ -1,11 +1,12 @@
 # React Pagination Challenge
 
 ## Challege Scenario
-Contribute code to populate the pre-defined table with data rows from an API. Code should be written in App.js.
+
+Contribute code to populate the pre-defined table with data rows from the Pokemon API. Code should be written in src/App.js.
 
 ## Available Scripts
 
-In the project directory, you can run:
+To run the project locally, use the following command:
 
 ### `npm start`
 
@@ -14,5 +15,3 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
-
-
