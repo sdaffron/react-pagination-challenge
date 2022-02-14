@@ -5,7 +5,9 @@
 Contribute code to populate the pre-defined table with data rows from the Pokemon API. Code should be written in src/App.js.
 
 ## Acceptance Criteria
+
 As a user I want to:
+
 - View paginated table of pokemon records
 - Only 10 pokemon records should display at a time
 - Be able to use page navigation buttons to go to next/previous page
@@ -13,7 +15,12 @@ As a user I want to:
 - I should not be able to navigate to a page before the first page or after the last page
 
 **Bonus**
+
 - Dropdown menu to directly navigate to a given selected page
+
+## Documentation
+
+Details for the Pokemon API can be found here: https://pokeapi.co/
 
 ## Available Scripts
 
