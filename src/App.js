@@ -9,7 +9,6 @@ function App() {
   const POKEMON_API_URL = "https://pokeapi.co/api/v2/pokemon?limit=10&offset=";
 
   const [pokemon, setPokemon] = useState([]);
-  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     fetchData();
