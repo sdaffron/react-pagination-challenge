@@ -1,0 +1,54 @@
+import "./App.css";
+import { useState, useEffect } from "react";
+
+function App() {
+  const [data, setData] = useState([]);
+  const [url, setUrl] = useState("https://pokeapi.co/api/v2/pokemon?limit=10&offset=");
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const res = await fetch(url);
+      const json = await res.json();
+      setData(json);
+  };
+  fetchData();
+}, [url]);
+
+  const renderRow = () => {
+    return data.results && data.results.map(({ name, url }) => {  //need this logic because data array is empty initially and map function will break
+      return (
+        <tr key={name}>
+          <td>{name}</td>
+          <td>{url}</td>
+        </tr>
+      )
+    })
+  }
+
+return (
+    <div className="App">
+      <header>Pokemon List React Paging Challenge</header>
+      <div>
+        <table className="table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>URL</th>
+            </tr>
+          </thead>
+          <tbody>
+            {renderRow()} 
+          </tbody>
+        </table>
+        <section className="pagination">
+          <button className="first-page-btn" onClick={() => setUrl("https://pokeapi.co/api/v2/pokemon?limit=10&offset=")}>first</button>
+          <button className="previous-page-btn" onClick={() => setUrl(data.previous)}>previous</button>
+          <button className="next-page-button" onClick={() => setUrl(data.next)}>next</button>
+          <button className="last-page-button" onClick={() => setUrl("https://pokeapi.co/api/v2/pokemon?limit=10&offset=1108")}>last</button>
+        </section>
+      </div>
+    </div>
+  );
+}
+
+export default App;
